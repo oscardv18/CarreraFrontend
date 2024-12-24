@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ced0e2;
+}
+
+:root {
+  --toggle-switch-bg: #232428;
+  --toggle-border: #232428;
+  --toggle-bg: #fff;
+}
+
+.toggle-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: gray;
+}
+
+.toggle-input {
+  display: none;
+}
+
+label {
+  width: 130px;
+  height: 50px;
+  padding: 0.3em;
+  background: var(--toggle-bg);
+  border-radius: 7em;
+  border: 3px solid var(--toggle-border);
+}
+
+.toggle-switch {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--toggle-switch-bg);
+  transition: all 0.3s ease;
+}
+
+.toggle-input:checked ~ .toggle-switch {
+  transform: translateX(calc(130px - 50px));
+}

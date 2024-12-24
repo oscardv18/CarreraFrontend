@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+:root {
+  --orange: #e15307;
+  --white: #ffffff;
+  --green: #10af2a;
+  --flag-height: 500px;
+}
+
+.flag-niger {
+  display: grid;
+  margin: 2em auto;
+  grid-template-rows: repeat(3, 1fr);
+  height: var(--flag-height);
+  width: calc(var(--flag-height) * 7 / 6);
+}
+
+.orange {
+  background: var(--orange);
+}
+
+.white {
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.green {
+  background: var(--green);
+}
+
+.flag-niger > .white > .circle {
+  background: var(--orange);
+  width: calc(var(--flag-height) / 3 * 0.85);
+  height: calc(var(--flag-height) / 3 * 0.85);
+  border-radius: 100%;
+}

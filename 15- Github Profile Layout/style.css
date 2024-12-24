@@ -1,0 +1,81 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #c9d1d9;
+}
+
+:root {
+  --font-main: "Noto Sans", sans-serif;
+  --main-bg: #000;
+  --profile-bg: #0d1117;
+  --profile-color: #c9d1d9;
+  --profile-img-border: #2e343b;
+  --username-font-color: #8b949e;
+  --username-font-weight: 400;
+  --btn-bg: #21262d;
+  --btn-color: #c9d1d9;
+  --btn-bg-hover: #30363d;
+  --btn-border: #373b43;
+  --btn-border-hover: #8c949e;
+}
+
+.profile-container {
+  display: flex;
+  margin: 1em auto;
+  width: 80%;
+  min-width: 250px;
+  max-width: 400px;
+  background: var(--profile-bg);
+}
+
+.profile-container > .profile-content {
+  padding: 1em 2em;
+}
+
+.profile-container > .profile-content > img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--profile-img-border);
+}
+
+.profile-container > .profile-content > .profile-details {
+  font-family: var(--font-main);
+}
+
+.profile-container > .profile-content > .profile-details {
+  font-weight: var(--username-font-weight);
+  color: var(--username-font-color);
+}
+
+.profile-details h2,
+.profile-details h3 {
+  margin: 0;
+}
+
+button {
+  width: 100%;
+  color: var(--btn-color);
+  background: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 4px;
+  padding: 0.25em;
+  font-size: 1.1em;
+  margin: 0.3em 0 1em 0;
+}
+
+button:hover {
+  border-color: var(--btn-border-hover);
+  background-color: var(--btn-bg-hover);
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 1em;
+  line-height: normal;
+}
+
+h3 {
+  font-weight: var(--username-font-weight);
+}

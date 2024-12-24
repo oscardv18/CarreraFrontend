@@ -1,0 +1,74 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --progressbar-bg: lightgrey;
+  --start: red;
+  --middle: blue;
+  --finish: green;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 2em auto;
+}
+
+.progress-bar {
+  width: 60%;
+  height: 50px;
+  border-radius: 4em;
+  background: var(--progressbar-bg);
+}
+
+.progress-status {
+  height: 100%;
+  width: 0;
+  border-radius: 4em;
+  animation: pgstatus 4s linear infinite;
+}
+
+@keyframes pgstatus {
+  0% {
+    width: 15%;
+    background: var(--start);
+  }
+
+  25% {
+    width: 25%;
+    background: var(--start);
+  }
+
+  50% {
+    width: 50%;
+    background: var(--middle);
+  }
+
+  65% {
+    width: 65%;
+    background: var(--middle);
+  }
+
+  70% {
+    width: 65%;
+    background: var(--middle);
+  }
+
+  75% {
+    width: 75%;
+    background: var(--middle);
+  }
+
+  80% {
+    width: 80%;
+    background: var(--finish);
+  }
+
+  100% {
+    width: 100%;
+    background: var(--finish);
+  }
+}

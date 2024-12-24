@@ -1,0 +1,32 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --black: #000000;
+  --red: #de0002;
+  --yellow: #ffce00;
+  --flag-height: 150px;
+}
+
+.germany-flag {
+  display: grid;
+  margin: 2em auto;
+  grid-template-rows: repeat(3, 1fr);
+  height: var(--flag-height);
+  width: calc(var(--flag-height) * 5 / 3);
+}
+
+.black {
+  background: var(--black);
+}
+
+.red {
+  background: var(--red);
+}
+
+.yellow {
+  background: var(--yellow);
+}

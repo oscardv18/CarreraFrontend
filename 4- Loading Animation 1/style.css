@@ -1,0 +1,52 @@
+:root {
+  --color-light: lightgray;
+  --color-dark: darkgray;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.circle {
+  background: var(--color-light);
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  margin: 1rem;
+  animation-name: loading;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 0.5s ease-out;
+}
+
+@keyframes loading {
+  from {
+    background: var(--color-dark);
+  }
+
+  25% {
+    background: var(--color-light);
+  }
+
+  50% {
+    width: 35px;
+    height: 35px;
+  }
+
+  75% {
+    background: var(--color-dark);
+  }
+
+  to {
+    background: var(--color-light);
+  }
+}

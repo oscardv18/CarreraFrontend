@@ -1,0 +1,53 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.square {
+  width: 50px;
+  height: 50px;
+  margin: 1.5rem;
+  transition: all 0.5s ease;
+  animation-name: squareLoading;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.square1 {
+  background: red;
+}
+
+.square2 {
+  background: yellow;
+}
+
+.square3 {
+  background: blue;
+}
+
+@keyframes squareLoading {
+  from {
+    transform: rotate(45deg);
+  }
+
+  25% {
+    transform: rotate(135deg);
+  }
+
+  50% {
+    transform: rotate(225deg);
+  }
+
+  to {
+    transform: rotate(315deg);
+  }
+}

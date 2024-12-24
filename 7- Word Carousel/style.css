@@ -1,0 +1,58 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-word: #5134ff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container > p {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.container > p::after {
+  background: var(--bg-word);
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-left: 5px;
+  transition: all 0.5s ease;
+  content: "anime";
+  animation-name: wordCarousel;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes wordCarousel {
+  from {
+    content: "eat";
+  }
+
+  25% {
+    content: "coding";
+  }
+
+  50% {
+    content: "music";
+  }
+
+  75% {
+    content: "sleep";
+  }
+
+  to {
+    content: "gaming";
+  }
+}
